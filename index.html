@@ -31,6 +31,23 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+   <style>
+   .tab-btn {
+     background: transparent;
+     color: white;
+     border: 1px solid #12d640;
+     padding: 10px 20px;
+     margin: 5px;
+     cursor: pointer;
+     transition: 0.3s;
+   }
+   
+   .tab-btn:hover,
+   .tab-btn.active {
+     background: #12d640;
+     color: #000;
+   }
+   </style>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
@@ -41,8 +58,6 @@
 
     gtag('config', 'UA-169007209-3');
   </script>
-
-
 
   <!-- =======================================================
   * Template Name: Personal - v2.1.0
@@ -247,14 +262,27 @@
 
 
 
-  <!-- Start Project Section -->
+<!-- Start Project Section -->
+<section id="portfolio" class="portfolio">
+  <div class="container">
 
+    <div class="section-title">
+      <h2>Projects</h2>
+    </div>
+
+    <div class="section-headline">
+      <h2>
+        These are a couple of the projects I worked on. Some of which were a team effort along with the people I was assigned to.
+      </h2>
+    </div>
+    
+</section>
   <!-- Tabs -->
 <div class="text-center mb-4">
-  <button class="tab-btn active" onclick="showTab('games')">Games</button>
-  <button class="tab-btn" onclick="showTab('art')">Art</button>
-  <button class="tab-btn" onclick="showTab('music')">Music</button>
-  <button class="tab-btn" onclick="showTab('video')">Video Editing</button>
+<button class="tab-btn active" onclick="showTab(event,'games')">Games</button>
+<button class="tab-btn" onclick="showTab(event,'art')">Art</button>
+<button class="tab-btn" onclick="showTab(event,'music')">Music</button>
+<button class="tab-btn" onclick="showTab(event,'video')">Video Editing</button>
 </div>
 
 <!-- GAMES TAB -->
@@ -347,7 +375,7 @@
     </div>
   </div>
 </div>
-
+</div>
   <!-- Start Skills Section -->
 
   <section id="skills" class="services">
@@ -405,41 +433,21 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-function showTab(tabId) {
-  // Hide all tab contents
+function showTab(event, tabId) {
+
   document.querySelectorAll('.tab-content').forEach(tab => {
     tab.style.display = 'none';
   });
 
-  // Show selected tab
   document.getElementById(tabId).style.display = 'block';
 
-  // Update active button
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.classList.remove('active');
   });
 
-  event.target.classList.add('active');
+  event.currentTarget.classList.add('active');
 }
 </script>
-
-<style>
-.tab-btn {
-  background: transparent;
-  color: white;
-  border: 1px solid #12d640;
-  padding: 10px 20px;
-  margin: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.tab-btn:hover,
-.tab-btn.active {
-  background: #12d640;
-  color: #000;
-}
-</style>
 
 </body>
 
