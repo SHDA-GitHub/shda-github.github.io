@@ -248,81 +248,105 @@
 
 
   <!-- Start Project Section -->
-  <section id="portfolio" class="portfolio">
-    <div class="container">
 
-      <div class="section-title">
-        <h2>Projects</h2>
-      </div>
+  <!-- Tabs -->
+<div class="text-center mb-4">
+  <button class="tab-btn active" onclick="showTab('games')">Games</button>
+  <button class="tab-btn" onclick="showTab('art')">Art</button>
+  <button class="tab-btn" onclick="showTab('music')">Music</button>
+  <button class="tab-btn" onclick="showTab('video')">Video Editing</button>
+</div>
 
-      <div class = "section-headline">
-        <h2>These are a couple of the projects I worked on. Some of which were a team effort along with the people I was assigned to.</h2>
-      </div>
+<!-- GAMES TAB -->
+<div id="games" class="tab-content">
+  <div class="row portfolio-container">
 
-      <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
-        </div>
-      </div>
-
-      <div class="row portfolio-container">
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center><h4>Bug-Off!</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/bugoff.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="https://jalvent.itch.io/bug-off" style="color:#12d640">Bug-Off!</i></a><br>
-              </div>
-            </div>
+    <div class="col-lg-4 col-md-6 portfolio-item">
+      <center><h4>Bug-Off!</h4></center>
+      <div class="portfolio-wrap">
+        <img src="assets/img/project/bugoff.png" class="img-fluid" alt="">
+        <div class="portfolio-info">
+          <div class="portfolio-links">
+            <a href="https://jalvent.itch.io/bug-off" style="color:#12d640">Bug-Off!</a>
           </div>
         </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center><h4>MISSION: Green Star</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/missiongreenstar.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="https://neotheducc.itch.io/mission-green-star" style="color:#12d640">MISSION: green star</i></a><br>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center><h4>GardenWatchers</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/gardenwatcher.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="https://doorus.itch.io/gardenwatchers" style="color:#12d640">GardenWatchers</i></a><br>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center><h4>Quest To Conquer All</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/questtoconquerall.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="https://thatdudeontheinternet.itch.io/quest-to-conquer-all" style="color:#12d640">Quest To Conquer All</i></a><br>
-              </div>
-            </div>
-          </div>
-        </div>
-        
       </div>
     </div>
-  </section>
 
-  <!-- End Project Section -->
+    <div class="col-lg-4 col-md-6 portfolio-item">
+      <center><h4>MISSION: Green Star</h4></center>
+      <div class="portfolio-wrap">
+        <img src="assets/img/project/missiongreenstar.png" class="img-fluid" alt="">
+        <div class="portfolio-info">
+          <div class="portfolio-links">
+            <a href="https://neotheducc.itch.io/mission-green-star" style="color:#12d640">MISSION: Green Star</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 portfolio-item">
+      <center><h4>GardenWatchers</h4></center>
+      <div class="portfolio-wrap">
+        <img src="assets/img/project/gardenwatcher.png" class="img-fluid" alt="">
+        <div class="portfolio-info">
+          <div class="portfolio-links">
+            <a href="https://doorus.itch.io/gardenwatchers" style="color:#12d640">GardenWatchers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 portfolio-item">
+      <center><h4>Quest To Conquer All</h4></center>
+      <div class="portfolio-wrap">
+        <img src="assets/img/project/questtoconquerall.png" class="img-fluid" alt="">
+        <div class="portfolio-info">
+          <div class="portfolio-links">
+            <a href="https://thatdudeontheinternet.itch.io/quest-to-conquer-all" style="color:#12d640">Quest To Conquer All</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ART TAB -->
+<div id="art" class="tab-content" style="display:none;">
+  <div class="row portfolio-container">
+    <div class="col-lg-4 col-md-6 portfolio-item">
+      <center><h4>Artwork Example</h4></center>
+      <div class="portfolio-wrap">
+        <img src="assets/img/project/art-placeholder.png" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MUSIC TAB -->
+<div id="music" class="tab-content" style="display:none;">
+  <div class="row portfolio-container">
+    <div class="col-lg-4 col-md-6 portfolio-item">
+      <center><h4>Music Example</h4></center>
+      <div class="portfolio-wrap">
+        <img src="assets/img/project/music-placeholder.png" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VIDEO TAB -->
+<div id="video" class="tab-content" style="display:none;">
+  <div class="row portfolio-container">
+    <div class="col-lg-4 col-md-6 portfolio-item">
+      <center><h4>Video Example</h4></center>
+      <div class="portfolio-wrap">
+        <img src="assets/img/project/video-placeholder.png" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Start Skills Section -->
 
@@ -379,6 +403,43 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+function showTab(tabId) {
+  // Hide all tab contents
+  document.querySelectorAll('.tab-content').forEach(tab => {
+    tab.style.display = 'none';
+  });
+
+  // Show selected tab
+  document.getElementById(tabId).style.display = 'block';
+
+  // Update active button
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  event.target.classList.add('active');
+}
+</script>
+
+<style>
+.tab-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid #12d640;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background: #12d640;
+  color: #000;
+}
+</style>
 
 </body>
 
