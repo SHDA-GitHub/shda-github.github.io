@@ -69,9 +69,6 @@
     background: transparent;  /* remove black background if undesired */
   }
 
-  .portfolio-wrap::before {
-    display: none;        /* hide overlay if not needed */
-  }
    </style>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -370,8 +367,9 @@
   
   <!-- ART TAB -->
   <div id="art" class="tab-content" style="display:none;">
-    <div class="row portfolio-container">
-      <div class="col-lg-4 col-md-6 portfolio-item">
+    <div class="project-grid">
+
+      <div class="portfolio-item">
         <center><h4>Artwork Example</h4></center>
         <div class="portfolio-wrap">
           <img src="assets/img/project/art-placeholder.png" class="img-fluid" alt="">
@@ -382,8 +380,9 @@
   
   <!-- MUSIC TAB -->
   <div id="music" class="tab-content" style="display:none;">
-    <div class="row portfolio-container">
-      <div class="col-lg-4 col-md-6 portfolio-item">
+    <div class="project-grid">
+
+      <div class="portfolio-item">
         <center><h4>Music Example</h4></center>
         <div class="portfolio-wrap">
           <img src="assets/img/project/music-placeholder.png" class="img-fluid" alt="">
@@ -394,8 +393,9 @@
   
   <!-- VIDEO TAB -->
   <div id="video" class="tab-content" style="display:none;">
-    <div class="row portfolio-container">
-      <div class="col-lg-4 col-md-6 portfolio-item">
+    <div class="project-grid">
+
+      <div class="portfolio-item">
         <center><h4>Video Example</h4></center>
         <div class="portfolio-wrap">
           <img src="assets/img/project/video-placeholder.png" class="img-fluid" alt="">
@@ -462,7 +462,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script>
+<script>
 function showTab(event, tabId) {
 
   document.querySelectorAll('.tab-content').forEach(tab => {
@@ -475,8 +475,29 @@ function showTab(event, tabId) {
     btn.classList.remove('active');
   });
 
-  event.currentTarget.classList.add('active');
+  if (event) {
+    event.currentTarget.classList.add('active');
+  }
 }
+
+function openDefaultProjectTab() {
+  const hash = window.location.hash;
+
+  if (hash === "#portfolio") {
+    showTab(null, "games");
+
+    // also mark Games button as active
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    const gamesBtn = document.querySelector('.tab-btn');
+    if (gamesBtn) gamesBtn.classList.add('active');
+  }
+}
+
+window.addEventListener("load", openDefaultProjectTab);
+window.addEventListener("hashchange", openDefaultProjectTab);
 </script>
 
 </body>

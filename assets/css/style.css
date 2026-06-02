@@ -816,25 +816,33 @@ section .container {
   margin-right: 0;
 }
 
+/* Portfolio Hover Effects */
 .portfolio .portfolio-wrap {
-  transition: 0.3s;
   position: relative;
   overflow: hidden;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.6);
+}
+
+.portfolio .portfolio-wrap img {
+  width: 100%;
+  transition: transform 0.4s ease;
 }
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
   position: absolute;
-  left: 30px;
-  right: 30px;
-  top: 30px;
-  bottom: 30px;
-  transition: all ease-in-out 0.3s;
-  z-index: 2;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
   opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.portfolio .portfolio-wrap:hover::before {
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover img {
+  transform: scale(1.08);
 }
 
 .portfolio .portfolio-wrap .portfolio-info {
@@ -912,14 +920,6 @@ section .container {
   color: #63eda3;
 }
 
-.portfolio .portfolio-wrap:hover::before {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
-}
-
 .portfolio .portfolio-wrap:hover .portfolio-info {
   opacity: 1;
 }
@@ -949,9 +949,14 @@ section .container {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
-  margin-top: 20px;
+  justify-items: center;
+}
+
+.project-grid .portfolio-item {
+  width: 100%;
+  max-width: 320px;
 }
 
 /*--------------------------------------------------------------
