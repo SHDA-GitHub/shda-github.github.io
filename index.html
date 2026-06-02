@@ -47,6 +47,31 @@
      background: #12d640;
      color: #000;
    }
+
+    .project-grid .portfolio-item,
+    .tab-content .portfolio-item {
+      width: auto;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+  .project-grid .portfolio-item img,
+  .tab-content .portfolio-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .portfolio-wrap {
+    position: relative;   /* keep hover overlay working */
+    overflow: hidden;
+    background: transparent;  /* remove black background if undesired */
+  }
+
+  .portfolio-wrap::before {
+    display: none;        /* hide overlay if not needed */
+  }
    </style>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -282,6 +307,10 @@
 <button class="tab-btn" onclick="showTab(event,'art')">Art</button>
 <button class="tab-btn" onclick="showTab(event,'music')">Music</button>
 <button class="tab-btn" onclick="showTab(event,'video')">Video Editing</button>
+</div>
+
+<div id="tab-title" class="text-center mb-4">
+  <h3>Select a category</h3>
 </div>
 
   <!-- GAMES TAB -->
