@@ -959,6 +959,18 @@ section .container {
   max-width: 320px;
 }
 
+.video-item .portfolio-wrap::before {
+    display: none !important;
+}
+
+.video-item .portfolio-wrap:hover::before {
+    opacity: 0 !important;
+}
+
+.video-item .portfolio-info {
+    display: none !important;
+}
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
